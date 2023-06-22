@@ -1,0 +1,55 @@
+@import "./_typography.less";
+@import "./_variables.less";
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(@pureWhite);
+  overflow-x: hidden;
+}
+
+.hero-drinking-coffe {
+  width: 991px;
+  height: 936px;
+  position: absolute;
+  top: -10rem;
+  right: -20rem;
+  z-index: -1;
+
+}
+
+.app__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 15rem 3rem 10rem;
+}
+
+.app__main {
+  margin-top: 8rem;
+  .app__related-info {
+    width: 457px;
+    height: 359px;
+    margin-left: 10rem;
+
+    .app__title {
+      font-size: @fs_heading_xl;
+      font-weight: @fw_bold;
+      line-height: @line_height_xl;
+    }
+
+    .app__description {
+      font-size: @fs_body_m;
+      font-weight: @fw_medium;
+      line-height: @line_height_base;
+    }
+
+  }
+}
