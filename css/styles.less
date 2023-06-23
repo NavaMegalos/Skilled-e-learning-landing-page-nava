@@ -13,16 +13,31 @@
 
 body {
   background-color: hsl(@pureWhite);
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 200;
+  max-width: 100%;
   overflow-x: hidden;
+
 }
 
-.hero-drinking-coffe {
-  width: 991px;
-  height: 936px;
+.hero-div {
+  background: url("../assets/image-hero-desktop.png");
+  background-repeat: no-repeat;
+  background-position: 228px -180px;
+  background-size: auto 950px;
+  height: 937px;
+  width: 932px;
   position: absolute;
-  top: -10rem;
-  right: -20rem;
+  top: 0;
+  right: 0;
   z-index: -1;
+
+  @media(max-width: 1124px) {
+    background-position: 100px -100px;
+    background-size: auto 750px;
+    height: 641px;
+    width: 640px;
+  }
 
 }
 
@@ -40,11 +55,13 @@ body {
 }
 
 .btn-red {
-  background: linear-gradient(180deg, hsl(@linear-f1-color2) 0%, hsl(@linear-f1-color1) 100%);
+  background: 
+    linear-gradient(180deg, hsl(@linear-f1-color2) 0%, hsl(@linear-f1-color1) 100%);
 }
 
 .btn-purple {
-  background: linear-gradient(180deg, hsl(@linear-f2-color1) 0%, hsl(@linear-f2-color2) 100%);
+  background: 
+    linear-gradient(180deg, hsl(@linear-f2-color1) 0%, hsl(@linear-f2-color2) 100%);
 }
 
 .btn-transparent {
@@ -54,25 +71,33 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  width: 1110px;
-  height: 748px;
-  margin: auto;
-  padding: 10rem;
-  flex-shrink: 0;
   gap: 100px 30px;
-  
+  grid-template-columns: repeat(3, 1fr);
+  height: 748px;
+  width: 1110px;
+  margin: auto;
+  padding-bottom: 10rem;
+
+  @media(max-width: 1450px) {
+    grid-template-columns: repeat(2, 1fr);
+    height: 1000px;
+    width: 770px;
+    padding-bottom: 25rem;
+  }
+
+
   .grid-item {
-    justify-content: center;
-    width: 350px;
-    height: 322px;
     background-color: hsl(@pureWhite);
     border-radius: 15px;
     box-shadow: 0px 25px 50px 0px rgba(6, 22, 141, 0.04);
     display: flex;
     flex-direction: column;
-    text-align: start;
+    justify-content: center;
+    height: 322px;
+    width: 350px;
     padding: 1rem;
+    text-align: start;
+
     
     >* {
       padding: 0;
@@ -81,8 +106,8 @@ body {
     }
 
     .icon {
-      position: absolute;
       margin-bottom: 360px;
+      position: absolute;
     }
 
     .title {
@@ -96,6 +121,18 @@ body {
       font-size: @fs_body_m;
       font-weight: 500;
       line-height: @line_height_base;
+    }
+  }
+
+  .grid-item-one {
+    background: 
+      linear-gradient(180deg, hsl(@linear-f1-color2) 0%, hsl(@linear-f1-color1) 100%);
+
+    .title {
+      color: hsl(@pureWhite);
+      font-size: @fs_heading_m;
+      font-weight: 800;
+      line-height: @line_height_m;
     }
   }
 
@@ -145,3 +182,4 @@ body {
   justify-content: space-between;
   padding: 3rem 15rem 3rem 10rem;
 }
+
