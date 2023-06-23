@@ -25,6 +25,7 @@ Users should be able to:
 - See hover states for interactive elements
 
 ### Links
+- Solution URL: [Click here..](https://skilled-e-learning-nava.netlify.app/)
 
 ### Built with
 
@@ -34,6 +35,8 @@ Users should be able to:
 - CSS LESS Preprocesor
 
 ### What I learned
+
+Hello there! In this ocassion I am glad to say that I learned a loooooot! Improving my css grid skills and also learning a couple thing about LESS. <br>This is my first time using LESS on my personal project so, I will appreciate every tips or considerations that u think will be good for improving and learn more, see you until the next time!.
 
 ## Author
 
