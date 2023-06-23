@@ -26,18 +26,99 @@ body {
 
 }
 
+.btn {
+  border: 0;
+  border-radius: 28px;
+  color: white;
+  font-size: @fs_body_m;
+  font-weight: @fw_bold;
+  padding: .8rem 2.5rem;
+}
+
+.btn-black {
+  background-color: hsl(@dark);
+}
+
+.btn-red {
+  background: linear-gradient(180deg, hsl(@linear-f1-color2) 0%, hsl(@linear-f1-color1) 100%);
+}
+
+.btn-purple {
+  background: linear-gradient(180deg, hsl(@linear-f2-color1) 0%, hsl(@linear-f2-color2) 100%);
+}
+
+.btn-transparent {
+  color: hsl(@pureRed);
+  background-color: hsl(@pureWhite);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 1110px;
+  height: 748px;
+  margin: auto;
+  padding: 10rem;
+  flex-shrink: 0;
+  gap: 100px 30px;
+  
+  .grid-item {
+    justify-content: center;
+    width: 350px;
+    height: 322px;
+    background-color: hsl(@pureWhite);
+    border-radius: 15px;
+    box-shadow: 0px 25px 50px 0px rgba(6, 22, 141, 0.04);
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    padding: 1rem;
+    
+    >* {
+      padding: 0;
+      flex: .25;
+      text-align: start;
+    }
+
+    .icon {
+      position: absolute;
+      margin-bottom: 360px;
+    }
+
+    .title {
+      color: hsl(@dark);
+      font-size: @fs_heading_s;
+      font-weight: 800;
+    }
+
+    .description {
+      color: hsl(@gray);
+      font-size: @fs_body_m;
+      font-weight: 500;
+      line-height: @line_height_base;
+    }
+  }
+
+}
+
 .app__header {
   display: flex;
   justify-content: space-between;
   padding: 3rem 15rem 3rem 10rem;
+
 }
 
 .app__main {
   margin-top: 8rem;
   .app__related-info {
-    width: 457px;
-    height: 359px;
     margin-left: 10rem;
+    margin-bottom: 8rem;
+    height: 359px;
+    width: 457px;
+
+    >* {
+      margin: .8rem 0;
+    }
 
     .app__title {
       font-size: @fs_heading_xl;
@@ -50,6 +131,17 @@ body {
       font-weight: @fw_medium;
       line-height: @line_height_base;
     }
-
   }
+
+  .app__courses {
+    width: 100%;
+    background: linear-gradient(180deg, #FFF 0%, #F0F1FF 100%);
+  }
+}
+
+.app__footer {
+  background-color: hsl(@dark);
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 15rem 3rem 10rem;
 }
